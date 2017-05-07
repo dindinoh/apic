@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM debian:latest
 
 RUN apt-get -qq update && apt-get -qq dist-upgrade
 RUN apt-get -y install wget build-essential libssl-dev
