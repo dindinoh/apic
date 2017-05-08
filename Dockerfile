@@ -8,6 +8,5 @@ RUN cd picoLisp && wget --quiet http://software-lab.de/x86-64.linux.tgz && tar x
 RUN cd picoLisp/src64 && make
 RUN cd picoLisp/src && make tools gate
 RUN cd picoLisp && ./pil @lib/http.l -'pw 12' -bye
-COPY start.sh /start.sh
-
-ENTRYPOINT /bin/bash /start.sh
+COPY production.sh /production.sh
+COPY debug.sh /debug.sh
